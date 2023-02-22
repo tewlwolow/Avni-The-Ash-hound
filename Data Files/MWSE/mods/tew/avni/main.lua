@@ -14,6 +14,7 @@ end
 local function isAvniDead()
     -- Snatched from Guar Whisperer
     local ref = tes3.getReference("tew_avni")
+    if not ref then return false end
     if not ref.mobile then return false end
     local animState = ref.mobile.actionData.animationAttackState
     local isDead = (
