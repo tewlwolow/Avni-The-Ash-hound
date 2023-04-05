@@ -1,8 +1,8 @@
-local configPath = "Avni the Ash-hound"
+local metadata = toml.loadMetadata("Avni the Ash-hound")
+local configPath = metadata.package.name
 local config = require("tew.avni.config")
-mwse.loadConfig("Avni the Ash-hound")
-local modversion = require("tew\\avni\\version")
-local version = modversion.version
+mwse.loadConfig(metadata.package.name)
+
 
 local function registerVariable(id)
     return mwse.mcm.createTableVariable{
@@ -12,12 +12,12 @@ local function registerVariable(id)
 end
 
 local template = mwse.mcm.createTemplate{
-    name="Avni the Ash-hound",
-    headerImagePath="\\Textures\\tew\\avni\\tew_avni_logo.tga"}
+    name = metadata.package.name,
+    headerImagePath = "\\Textures\\tew\\avni\\tew_avni_logo.tga"}
 
     local page = template:createPage{label="Main Settings", noScroll=true}
     page:createCategory{
-        label = "Avni the Ash-hound "..version.." by tewlwolow.\nA Redoran-themed unique nix-hound companion, made for Spring Modjam 2021.\n\nSettings:",
+        label = metadata.package.name .. " " .. metadata.package.version .. " by tewlwolow.\n" .. metadata.package.description .. "\n\nSettings:",
     }
 
     page:createYesNoButton{

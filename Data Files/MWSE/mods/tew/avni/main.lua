@@ -8,7 +8,7 @@ local UICreated = 0
 
 local function debugLog(string)
     if debugLogOn then
-       mwse.log("[Avni the Ash-hound " .. metadata.package.version or "" .. "] "..string.format("%s", string))
+       mwse.log("[" .. metadata.package.name .. " " .. metadata.package.version or "" .. "] "..string.format("%s", string))
     end
 end
 
