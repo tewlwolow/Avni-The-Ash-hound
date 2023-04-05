@@ -1,13 +1,14 @@
-local config = require("tew\\avni\\config")
-local debugLogOn = config.debugLogOn
-local modversion = require("tew\\avni\\version")
-local version = modversion.version
-local UICreated = 0
+local config = require("tew.avni.config")
+local util = require("tew.avni.util")
+local metadata = toml.loadMetadata("Avni the Ash-hound")
 
+local debugLogOn = config.debugLogOn
+
+local UICreated = 0
 
 local function debugLog(string)
     if debugLogOn then
-       mwse.log("[Avni the Ash-hound "..version.."] "..string.format("%s", string))
+       mwse.log("[Avni the Ash-hound " .. metadata.package.version or "" .. "] "..string.format("%s", string))
     end
 end
 
@@ -461,6 +462,9 @@ local function teleportMenu(e)
 end
 
 local function init()
+    if not (metadata) then
+		util.metadataMissing()
+	end
     debugLog("Mod initialised.")
     event.register("activate", showUI)
     event.register("loaded", getData)

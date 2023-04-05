@@ -1,0 +1,29 @@
+[package]
+name = "Avni the Ash-hound"
+description = "A Redoran-themed unique nix-hound companion, made for Spring Modjam 2021."
+homepage = "https://www.nexusmods.com/morrowind/mods/49521"
+repository = "https://github.com/tewlwolow/Avni-the-Ash-hound"
+authors = ["tewlwolow"]
+version = "1.2.1"
+
+[tools.mwse]
+lua-mod = "tew.Avni the Ash Hound"
+wait-until-initialize = false
+
+[dependencies]
+assets = [
+	"Meshes\\tew\\avni",
+	"Textures\\tew\\avni",
+	"Sound\\Vo\\tew\\avni",
+	"Avni the Ash-hound.ESP"
+]
+
+# Broken for now
+# [dependencies.mods."Avni the Ash-hound"]
+# plugin = "Avni the Ash-hound.ESP"
+
+[dependencies.mwse]
+buildnumber = 3150
+
+[dependencies.mge-xe]
+version = ">=0.15.0"
