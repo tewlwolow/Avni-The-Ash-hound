@@ -18,9 +18,8 @@ assets = [
 	"Avni the Ash-hound.ESP"
 ]
 
-# Broken for now
-# [dependencies.mods."Avni the Ash-hound"]
-# plugin = "Avni the Ash-hound.ESP"
+[dependencies.mods."Avni the Ash-hound"]
+plugin = "Avni the Ash-hound.ESP"
 
 [dependencies.mwse]
 buildnumber = 3150
