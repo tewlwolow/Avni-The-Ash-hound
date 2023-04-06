@@ -14,8 +14,7 @@ wait-until-initialize = false
 assets = [
 	"Meshes\\tew\\avni",
 	"Textures\\tew\\avni",
-	"Sound\\Vo\\tew\\avni",
-	"Avni the Ash-hound.ESP"
+	"Sound\\Vo\\tew\\avni"
 ]
 
 [dependencies.mods."Avni the Ash-hound"]
