@@ -469,6 +469,12 @@ local function init()
     event.register("activate", showUI)
     event.register("loaded", getData)
     event.register("key", teleportMenu)
+
+    -- Custom Icon for Skyrim Style Quest Notifications
+    local ssqn = include("SSQN.interop")
+    if (ssqn)  then
+        ssqn.registerQIcon("tew_Avni","\\Icons\\tew\\avni\\quest_avni.tga")
+    end
 end
 
 event.register("initialized", init)
