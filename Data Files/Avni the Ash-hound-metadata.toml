@@ -4,7 +4,7 @@ description = "A Redoran-themed unique nix-hound companion, made for Spring Modj
 homepage = "https://www.nexusmods.com/morrowind/mods/49521"
 repository = "https://github.com/tewlwolow/Avni-the-Ash-hound"
 authors = ["tewlwolow"]
-version = "1.2.1"
+version = "1.2.2"
 
 [tools.mwse]
 lua-mod = "tew.Avni the Ash Hound"
@@ -14,7 +14,8 @@ wait-until-initialize = false
 assets = [
 	"Meshes\\tew\\avni",
 	"Textures\\tew\\avni",
-	"Sound\\Vo\\tew\\avni"
+	"Sound\\Vo\\tew\\avni",
+	"Icons\\tew\\avni",
 ]
 
 [dependencies.mods."Avni the Ash-hound"]
